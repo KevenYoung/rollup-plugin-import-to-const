@@ -1,12 +1,13 @@
 {
-  "name": "rollup-plugin-import-to-const",
-  "version": "0.1.4",
+  "name": "@zixel/rollup-plugin-import-to-const",
+  "version": "0.1.4-alpha.1",
   "description": "将 import 导入变量替换为 const 命名变量 的 rollup 插件。 ```js import { computed } from 'vue' ↓ const { computed } = Vue ``` ## 使用 安装 ```sh npm i -D rollup-plugin-import-to-const # or pnpm i -D rollup-plugin-import-to-const ``` 引入 ```js import importToConst from 'rollup-plugin-import-to-const'",
   "main": "dist/import-to-const.js",
   "module": "dist/import-to-const.mjs",
   "types": "index.d.ts",
   "scripts": {
     "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "release": "npm publish --registry=https://maven.zixel.cn/repository/npm-hosted/ --userconfig ./.npmrc --no-git-tag",
     "test": "node --experimental-vm-modules --no-warnings node_modules/jest/bin/jest.js -c=jest.config.js --no-cache"
   },
   "repository": {
